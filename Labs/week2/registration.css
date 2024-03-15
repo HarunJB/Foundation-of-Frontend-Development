@@ -1,0 +1,65 @@
+body {
+    background-color: #85afd4;
+    font-family: "Lato", sans-serif;
+    color: white;
+    text-align: center;
+  }
+  
+  h1, h3 {
+    font-weight: bold;
+  }
+  
+  blockquote {
+    padding: 10px;
+  }
+  
+  form {
+    padding: 20px;
+    text-align: center;
+    margin: auto; /* Center horizontally */
+    max-width: 400px; /* Adjust width as needed */
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  input[type="date"],
+  input[type="color"],
+  textarea {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  button[type="submit"] {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: #e47272;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .checkbox-label {
+    display: inline-block;
+    margin-top: 10px;
+  }
+  
+  .checkbox-label input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  .logo img {
+    width: 100px;
+  }
+  
