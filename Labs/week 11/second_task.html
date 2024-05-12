@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IP Address Information</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+    var ipAddress = ''; // You can specify the IP address here or leave it empty to get information about your own IP
+
+    $.ajax({
+        url: 'https://ipapi.co/' + ipAddress + '/json/',
+        dataType: 'json',
+        success: function(data) {
+            // Display IP address information
+            $('#ip-address').text(data.ip);
+            $('#country').text(data.country);
+            $('#region').text(data.region);
+            $('#city').text(data.city);
+            $('#postal-code').text(data.postal);
+            $('#latitude').text(data.latitude);
+            $('#longitude').text(data.longitude);
+            $('#timezone').text(data.timezone);
+        },
+        error: function() {
+            $('#ip-info').text('Failed to fetch IP address information.');
+        }
+    });
+});
+</script>
+</head>
+<body>
+
+<h1>IP Address Information</h1>
+
+<div id="ip-info">
+    <p><strong>IP Address:</strong> <span id="ip-address"></span></p>
+    <p><strong>Country:</strong> <span id="country"></span></p>
+    <p><strong>Region:</strong> <span id="region"></span></p>
+    <p><strong>City:</strong> <span id="city"></span></p>
+    <p><strong>Postal Code:</strong> <span id="postal-code"></span></p>
+    <p><strong>Latitude:</strong> <span id="latitude"></span></p>
+    <p><strong>Longitude:</strong> <span id="longitude"></span></p>
+    <p><strong>Timezone:</strong> <span id="timezone"></span></p>
+</div>
+
+</body>
+</html>
