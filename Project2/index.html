@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project 2</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+      <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+        <a href="#home" class="w3-bar-item w3-button"><b>BR</b> Architects</a>
+        <!-- Float links to the right. Hide them on small screens -->
+        <div class="w3-right w3-hide-small">
+          <a href="#darkmode" class="w3-bar-item w3-button">
+            <button id="themeSwitch" class="no-border-button">
+              <i class="fas fa-moon"></i>
+              <!-- Moon icon for dark mode -->
+            </button>
+          </a>
+          <a href="#projects" class="w3-bar-item w3-button">Projects</a>
+          <a href="#about" class="w3-bar-item w3-button">About</a>
+          <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header
+      class="w3-display-container w3-content w3-wide"
+      style="max-width: 1500px"
+      id="home"
+    >
+      <img
+        class="w3-image"
+        src="assets/pictures/architect.jpg"
+        alt="Architecture"
+        width="1500"
+        height="800"
+      />
+      <div class="w3-display-middle w3-margin-top w3-center">
+        <h1 class="w3-xxlarge w3-text-white">
+          <span class="w3-padding w3-black w3-opacity-min"><b>BR</b></span>
+          <span class="w3-hide-small w3-text-light-grey">Architects</span>
+        </h1>
+      </div>
+    </header>
+
+    <!-- Page content -->
+    <div class="w3-content w3-padding" style="max-width: 1564px">
+      <!-- Project Section -->
+      <div class="w3-container w3-padding-32" id="projects">
+        <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">
+          Projects
+        </h3>
+      </div>
+
+      <div class="w3-row-padding">
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">
+              Summer House
+            </div>
+            <img
+              class="project-image"
+              src="assets/pictures/summerhouse.jpg"
+              alt="House"
+              style="width: 100%"
+            />
+          </div>
+          <a
+            href="http://example.com/details.html?id=project1"
+            class="w3-button"
+            >View More</a
+          >
+          <button onclick="editProject('project1')">Edit</button>
+          <button onclick="deleteProject('project1')">Delete</button>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">
+              Brick House
+            </div>
+            <img
+              class="project-image"
+              src="assets/pictures/brickhouse.jpg"
+              alt="House"
+              style="width: 100%"
+            />
+          </div>
+          <a
+            href="http://example.com/details.html?id=project2"
+            class="w3-button"
+            >View More</a
+          >
+          <button onclick="editProject('project2')">Edit</button>
+          <button onclick="deleteProject('project2')">Delete</button>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">Renovated</div>
+            <img
+              class="project-image"
+              src="assets/pictures/renovated.jpg"
+              alt="House"
+              style="width: 100%"
+            />
+          </div>
+          <a
+            href="http://example.com/details.html?id=project3"
+            class="w3-button"
+            >View More</a
+          >
+          <button onclick="editProject('project3')">Edit</button>
+          <button onclick="deleteProject('project3')">Delete</button>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">Barn House</div>
+            <img
+              class="project-image"
+              src="assets/pictures/barn.jpg"
+              alt="House"
+              style="width: 100%"
+            />
+          </div>
+          <a
+            href="http://example.com/details.html?id=project4"
+            class="w3-button"
+            >View More</a
+          >
+          <button onclick="editProject('project4')">Edit</button>
+          <button onclick="deleteProject('project4')">Delete</button>
+        </div>
+      </div>
+
+      <div class="w3-row-padding">
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">Farm House</div>
+            <img
+              class="project-image"
+              src="assets/pictures/farmhouse.jpeg"
+              alt="House"
+              style="width: 99%"
+            />
+          </div>
+          <a
+            href="http://example.com/details.html?id=project5"
+            class="w3-button"
+            >View More</a
+          >
+          <button onclick="editProject('project5')">Edit</button>
+          <button onclick="deleteProject('project5')">Delete</button>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">
+              Mobile House
+            </div>
+            <img
+              class="project-image"
+              src="assets/pictures/mobile.jpg"
+              alt="House"
+              style="width: 99%"
+            />
+          </div>
+          <a
+            href="http://example.com/details.html?id=project6"
+            class="w3-button"
+            >View More</a
+          >
+          <button onclick="editProject('project6')">Edit</button>
+          <button onclick="deleteProject('project6')">Delete</button>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">Colonial</div>
+            <img
+              class="project-image"
+              src="assets/pictures/colonial.jpg"
+              alt="House"
+              style="width: 99%"
+            />
+          </div>
+          <a
+            href="http://example.com/details.html?id=project7"
+            class="w3-button"
+            >View More</a
+          >
+          <button onclick="editProject('project7')">Edit</button>
+          <button onclick="deleteProject('project7')">Delete</button>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">Duplex</div>
+            <img
+              class="project-image"
+              src="assets/pictures/duplex.jpg"
+              alt="House"
+              style="width: 99%"
+            />
+          </div>
+          <a
+            href="http://example.com/details.html?id=project8"
+            class="w3-button"
+            >View More</a
+          >
+          <button onclick="editProject('project8')">Edit</button>
+          <button onclick="deleteProject('project8')">Delete</button>
+        </div>
+      </div>
+
+      <script>
+
+        function editProject(projectId) {
+          // Simulate editing process
+          console.log("Editing project with ID:", projectId);
+          alert("Edit functionality simulated. Project updated successfully.");
+        }
+      
+
+        function deleteProject(projectId) {
+          // Simulate deletion process
+          console.log("Deleting project with ID:", projectId);
+          alert("Delete functionality simulated. Project deleted successfully.");
+        }
+      </script>
+
+
+      <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage" />
+        <div id="caption"></div>
+      </div>
+
+      <div class="w3-container w3-padding-32" id="about">
+        <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">
+          About
+        </h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est
+          laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+          nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat.
+        </p>
+      </div>
+
+      <div class="w3-row-padding w3-grayscale">
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <img
+            class="profile-image"
+            src="assets/pictures/Teodor.jpg"
+            alt="Teodor"
+            style="width: 100%"
+          />
+          <h3>Teodor Filipović</h3>
+          <p class="w3-opacity">CEO & Founder</p>
+          <p>
+            Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse
+            sodales pellentesque elementum.
+          </p>
+          <p>
+            <button class="w3-button w3-light-grey w3-block contact-btn">
+              Contact
+            </button>
+          </p>
+          <p class="contact-info" style="display: none">
+            Contact information: teodor@example.com
+          </p>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <img
+            class="profile-image"
+            src="assets/pictures/Jane.jpg"
+            alt="Jane"
+            style="width: 100%"
+          />
+          <h3>Jane Doe</h3>
+          <p class="w3-opacity">Architect</p>
+          <p>
+            Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse
+            sodales pellentesque elementum.
+          </p>
+          <p>
+            <button class="w3-button w3-light-grey w3-block contact-btn">
+              Contact
+            </button>
+          </p>
+          <p class="contact-info" style="display: none">
+            Contact information: jane@example.com
+          </p>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <img
+            class="profile-image"
+            src="assets/pictures/edah.jpg"
+            alt="Edah"
+            style="width: 100%"
+          />
+          <h3>Mike Ross</h3>
+          <p class="w3-opacity">Architect</p>
+          <p>
+            Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse
+            sodales pellentesque elementum.
+          </p>
+          <p>
+            <button class="w3-button w3-light-grey w3-block contact-btn">
+              Contact
+            </button>
+          </p>
+          <p class="contact-info" style="display: none">
+            Contact information: mike@example.com
+          </p>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <img
+            class="profile-image"
+            src="assets/pictures/vector.jpeg"
+            alt="Dan"
+            style="width: 100%"
+          />
+          <h3>Dan Star</h3>
+          <p class="w3-opacity">Architect</p>
+          <p>
+            Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse
+            sodales pellentesque elementum.
+          </p>
+          <p>
+            <button class="w3-button w3-light-grey w3-block contact-btn">
+              Contact
+            </button>
+          </p>
+          <p class="contact-info" style="display: none">
+            Contact information: dan@example.com
+          </p>
+        </div>
+      </div>
+
+      <div class="w3-container w3-padding-32" id="faq">
+        <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">FAQ</h3>
+        <div class="accordion">
+          <div class="accordion-item">
+            <h3 class="accordion-title">What services do you offer?</h3>
+            <div class="accordion-content">
+              <p>
+                BR Architects is your one-stop shop for transforming dreams into
+                reality. We offer a full spectrum of architectural services,
+                from crafting the initial vision to ensuring the final brick is
+                meticulously placed.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-title">
+              How long does a typical project take?
+            </h3>
+            <div class="accordion-content">
+              <p>
+                The timeline for your project is as unique as you are! It
+                depends on several factors, such as the size and complexity of
+                the design, the approval process, and construction schedules.
+                But worry not, during our initial consultation, we'll provide a
+                realistic roadmap for your project's journey. Consider it a
+                personalized itinerary for your architectural adventure!
+              </p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-title">What is your design process?</h3>
+            <div class="accordion-content">
+              <p>
+                At BR Architects, we believe collaboration is key. Our design
+                process is an interactive journey where we work closely with you
+                to understand your vision, budget, and lifestyle.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-title">
+              How do you charge for your services?
+            </h3>
+            <div class="accordion-content">
+              <p>
+                Our fees are tailored to the specific needs of your project. We
+                offer a transparent pricing structure with various options to
+                suit your budget. During our initial consultation, we'll discuss
+                these options in detail and provide a clear fee proposal. There
+                are no hidden surprises here – just exceptional design delivered
+                with exceptional value!
+              </p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-title">
+              Can you help with obtaining permits and approvals?
+            </h3>
+            <div class="accordion-content">
+              <p>
+                Absolutely! We understand navigating the world of permits and
+                approvals can be daunting. BR Architects will handle all the
+                necessary paperwork and ensure your project complies with local
+                regulations. We'll take that burden off your shoulders, allowing
+                you to focus on the exciting parts of bringing your vision to
+                life!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="w3-container w3-padding-32" id="contact">
+        <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">
+          Contact
+        </h3>
+        <p>Let's get in touch and talk about your next project.</p>
+        <form id="contactForm" action="/action_page.php" method="post">
+          <input
+            class="w3-input w3-border"
+            type="text"
+            placeholder="Name"
+            required
+            name="Name"
+          />
+          <input
+            class="w3-input w3-section w3-border"
+            type="email"
+            placeholder="Email"
+            required
+            name="Email"
+          />
+          <input
+            class="w3-input w3-section w3-border"
+            type="text"
+            placeholder="Subject"
+            required
+            name="Subject"
+          />
+          <textarea
+            class="w3-input w3-section w3-border"
+            placeholder="Comment"
+            required
+            name="Comment"
+          ></textarea>
+          <button class="w3-button w3-black w3-section" type="submit">
+            <i class="fa fa-paper-plane"></i> SEND MESSAGE
+          </button>
+        </form>
+      </div>
+
+      <!-- Image of location/map -->
+      <div class="w3-container">
+        <img src="assets/pictures/map.jpg" class="w3-image" style="width: 100%" />
+      </div>
+
+      <!-- End page content -->
+    </div>
+
+    <!-- Reviews Section -->
+    <div class="w3-container w3-padding-32" id="reviews">
+      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">
+        Client Reviews
+      </h3>
+      <div id="reviewList" class="w3-row-padding"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-16">
+      <p>
+        Powered by
+        <a
+          href="https://www.w3schools.com/w3css/default.asp"
+          title="W3.CSS"
+          target="_blank"
+          class="w3-hover-text-green"
+          >w3.css</a
+        >
+      </p>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- jQuery Validation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+    <!-- Toastr JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <!-- SPApp JS -->
+    <script src="https://unpkg.com/spapp/js/spapp.min.js"></script>
+
+    <script src="assets/app.js"></script>
+  </body>
+</html>

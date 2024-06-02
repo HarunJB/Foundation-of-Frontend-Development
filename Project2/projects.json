@@ -1,0 +1,45 @@
+{
+    "projects": [
+      {
+        "name": "Summer House",
+        "image": "pictures/summerhouse.jpg",
+        "description": "A beautiful summer house located by the lake, designed to provide a perfect retreat from the busy city life."
+      },
+      {
+        "name": "Brick House",
+        "image": "pictures/brickhouse.jpg",
+        "description": "An elegant brick house featuring traditional architecture with modern amenities."
+      },
+      {
+        "name": "Renovated House",
+        "image": "pictures/renovated.jpg",
+        "description": "A renovated house that combines historic charm with contemporary design."
+      },
+      {
+        "name": "Barn House",
+        "image": "pictures/barn.jpg",
+        "description": "A rustic barn house with a spacious interior, ideal for countryside living."
+      },
+      {
+        "name": "Farm House",
+        "image": "pictures/farmhouse.jpeg",
+        "description": "A cozy farmhouse surrounded by greenery, perfect for those who love nature."
+      },
+      {
+        "name": "Mobile House",
+        "image": "pictures/mobile.jpg",
+        "description": "A mobile house that offers flexibility and modern living on the go."
+      },
+      {
+        "name": "Colonial House",
+        "image": "pictures/colonial.jpg",
+        "description": "A grand colonial house with a majestic exterior and luxurious interior spaces."
+      },
+      {
+        "name": "Duplex",
+        "image": "pictures/duplex.jpg",
+        "description": "A duplex that offers comfortable living spaces for two families under one roof."
+      }
+    ]
+  }
+  

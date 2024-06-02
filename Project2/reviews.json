@@ -1,0 +1,25 @@
+{
+    "reviews": [
+      {
+        "name": "Malcom Daurtes",
+        "image": "assets/pictures/review2.jpg",
+        "review": "BR Architects transformed our home into a beautiful and functional space. We couldn't be happier with the results!"
+      },
+      {
+        "name": "Marice Dior",
+        "image": "assets/pictures/review1.jpg",
+        "review": "The team at BR Architects was professional and attentive to our needs. Highly recommend their services!"
+      },
+      {
+        "name": "Nadina Dilberović",
+        "image": "assets/pictures/review3.jpg",
+        "review": "Fantastic experience from start to finish. BR Architects exceeded our expectations in every way."
+      },
+      {
+        "name": "Kiyana Noir",
+        "image": "assets/pictures/review4.jpg",
+        "review": "Our project was completed on time and within budget. The attention to detail was superb. Thank you, BR Architects!"
+      }
+    ]
+  }
+  
